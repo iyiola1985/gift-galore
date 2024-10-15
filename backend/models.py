@@ -56,7 +56,7 @@ class Gift(db.Model, SerializerMixin):
     def __repr__(self):  # Corrected from _repr_ to __repr__
         return f'<Gift {self.name}>'
 
-class Orders(db.Model, SerializerMixin):
+class Order(db.Model, SerializerMixin):
     __tablename__ = 'orders'  # Corrected from _tablename_ to __tablename__
 
     id = db.Column(db.Integer, primary_key=True)
