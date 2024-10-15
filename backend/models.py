@@ -6,8 +6,8 @@ from datetime import datetime
 db = SQLAlchemy()
 
 class User(db.Model, SerializerMixin):
-    _tablename_ = 'users'
-    
+    __tablename__ = 'users'  # Corrected from _tablename_ to __tablename__
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
@@ -19,12 +19,12 @@ class User(db.Model, SerializerMixin):
     # Serialization rules
     serialize_rules = ('-password', '-gifts.user')
 
-    def _repr_(self):
+    def __repr__(self):  # Corrected from _repr_ to __repr__
         return f'<User {self.name}>'
 
 class Occasion(db.Model, SerializerMixin):
-    _tablename_ = 'occasions'
-    
+    __tablename__ = 'occasions'  # Corrected from _tablename_ to __tablename__
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
 
@@ -33,12 +33,12 @@ class Occasion(db.Model, SerializerMixin):
     # Serialization rules
     serialize_rules = ('-gifts.occasion',)
 
-    def _repr_(self):
+    def __repr__(self):  # Corrected from _repr_ to __repr__
         return f'<Occasion {self.name}>'
 
 class Gift(db.Model, SerializerMixin):
-    _tablename_ = 'gifts'
-    
+    __tablename__ = 'gifts'  # Corrected from _tablename_ to __tablename__
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
@@ -53,12 +53,12 @@ class Gift(db.Model, SerializerMixin):
     # Serialization rules
     serialize_rules = ('-occasion.gifts', '-creator.gifts')
 
-    def _repr_(self):
+    def __repr__(self):  # Corrected from _repr_ to __repr__
         return f'<Gift {self.name}>'
 
 class Orders(db.Model, SerializerMixin):
-    _tablename_ = 'orders'
-    
+    __tablename__ = 'orders'  # Corrected from _tablename_ to __tablename__
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
@@ -73,5 +73,5 @@ class Orders(db.Model, SerializerMixin):
     # Serialization rules
     serialize_rules = ('-user.orders', '-gift.orders')
 
-    def _repr_(self):
+    def __repr__(self):  # Corrected from _repr_ to __repr__
         return f'<Order {self.name}>'
