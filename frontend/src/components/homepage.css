@@ -1,0 +1,97 @@
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.landing-page {
+    font-family: old standard;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond
+    
+  }
+  
+  .hero {
+    background-color: #277ea0;
+    padding: 50px 20px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .features {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .feature {
+    margin: 20px 0;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+    
+  .overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+    color: white; /* Text color */
+    font-size: 25px; /* Text size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional shadow for readability */
+}
+.cta-button {
+    padding: 10px 10px; /* Button padding */
+    font-size: 26px; /* Button font size */
+    color: white; /* Button text color */
+    background-color: #ff5733; /* Button background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+.cta-button:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+}
+
+.features {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px; /* Add some padding */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px; /* Margin for spacing */
+}
+
+.features h2 {
+    font-family: "Qwitcher Grypen", cursive;
+    font-size: 20px; /* Adjust font size */
+    color: black;; /* Dark text color for readability */
+    line-height: 1.5; /* Line height for readability */
+    margin-bottom: 20px; /* Space below the heading */
+    
+}
+.feature {
+    display: inline-block; /* Allows for width adjustment */
+    padding: 10px 20px; /* Padding for the feature box */
+    background-color: #ff5733; /* Button-like background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.feature:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+}
